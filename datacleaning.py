@@ -20,8 +20,8 @@ def clean_it(df):
     df.waterfront = df.waterfront.fillna(value = 0)
     df.drop(columns = ['view','lat', 'long', 'zipcode', 'sqft_basement'],
         inplace = True)
+    #df.drop(df.index[12764], inplace=True)  Remove flier
     #df.yr_renovated.fillna(value = 0, inplace = True)
-    df['yard'] = df.sqft_lot - df.sqft_living
     df['ratio_15'] = df.sqft_living/df.sqft_living15
     df['years_old'] = 2020 - df.yr_built
     s = pd.get_dummies(df.condition, drop_first = True, prefix = 'condition')
