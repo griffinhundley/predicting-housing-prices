@@ -5,6 +5,7 @@ def run_lr(variables, X, y):
     formula = variables # This should be in the statsmodels format 'y~x1+x2+...'
     data_ols = pd.concat([X, y], axis = 1) # The X and y data are joined 
     model = ols(formula= formula, data= data_ols).fit() # Fitted sm least squares regression
+    print(model.summary())
     return model
 
 # Takes an ax and adds dollar formatting to the ticks
