@@ -2,9 +2,9 @@
 from statsmodels.formula.api import ols
 import pandas as pd
 def run_lr(variables, X, y):
-    formula = variables
-    data_ols = pd.concat([X, y], axis = 1)
-    model = ols(formula= formula, data= data_ols).fit()
+    formula = variables # This should be in the statsmodels format 'y~x1+x2+...'
+    data_ols = pd.concat([X, y], axis = 1) # The X and y data are joined 
+    model = ols(formula= formula, data= data_ols).fit() # Fitted sm least squares regression
     return model
 
 # Takes an ax and adds dollar formatting to the ticks
