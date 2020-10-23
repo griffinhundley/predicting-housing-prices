@@ -44,7 +44,7 @@ The data being used is publicly available housing data from King County, Washing
 The features in the data set are as follows: 
 
 ```'id', 'date', 'bedrooms', 'bathrooms', 'sqft_living','sqft_lot', 'floors', 'waterfront', 'grade', 'sqft_above', 'yr_built', 'sqft_living15', 'sqft_lot15', 'has_been_renovated', 'ratio_15', 'years_old', 'condition_2', 'condition_3', 'condition_4', 'condition_5'
-     ```
+```
 
 
 ## Data Preparation
