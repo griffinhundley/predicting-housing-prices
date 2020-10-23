@@ -47,13 +47,18 @@ The features in the data set are as follows:
 
 ## Data Preparation
 
+We began our preparation of the data by dropping the following columns: `view`, `lat`, `long`, `zipcode`, and `sqft_basement`.  `view` is not a feature of the house so it was dropped.  `lat`, `long`, and `zipcode` were dropped because the location is out of the scope of this project. `sqft_basement` was dropped because most houses didn't have basements
+
+We then created two new features. First is `ratio15`, which is the ratio of the size of the house compared to the homes around it, using the `sqft_living` and `sqft_living15`. The other is `years_old`, with the year built subtracted from 2020. We then cleaned the data by changing the date to a datetime datatype and filling in the null values for `waterfront`. Lastly, we created dummy variables for the `condition`. 
 
 
 ## Results
 
 Prior to modeling, we first looked at the relationship between housing price and each of the different features to get a starting point for our model. From here, we saw that living space seems to have the strongest correlation, and that there is a somewhat linear relationship between price and bathrooms and grade, as well.
 
-![pairplot](./images/pairplot2.png)
+![pairplot1](./images/pairplot.png)
+![pairplot2](./images/pairplot2.png)
+![pairplot3](./images/pairplot3.png)
 
 Next, we investigated collinearity between the different features to determine ensure that collinear features are not used together in the model. This was done using the heatmap below. 
 
